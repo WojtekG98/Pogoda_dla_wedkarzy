@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GlowneOkno</class>
+ <widget class="QMainWindow" name="GlowneOkno">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GlowneOkno</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOd_wie">
+    <property name="title">
+     <string>Odśwież</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuOkresy_Ochronne">
+    <property name="title">
+     <string>Okresy ochronne</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuPomoc">
+    <property name="title">
+     <string>Pomoc</string>
+    </property>
+    <addaction name="actionWy_wietl_pomoc"/>
+   </widget>
+   <widget class="QMenu" name="menuWybierz_lokalizacj">
+    <property name="title">
+     <string>Wybierz lokalizację</string>
+    </property>
+   </widget>
+   <addaction name="menuWybierz_lokalizacj"/>
+   <addaction name="menuOd_wie"/>
+   <addaction name="menuOkresy_Ochronne"/>
+   <addaction name="menuPomoc"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="actionWy_wietl_pomoc">
+   <property name="text">
+    <string>Wyświetl pomoc</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
