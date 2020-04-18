@@ -41,6 +41,53 @@ double DanePogodowe::TemperaturaMax() const
 {
     return this->temp_max;
 }
+
+QString DanePogodowe::NazwaMiasta() const
+{
+    return this->name;
+}
+
+QString DanePogodowe::IkonaPogody() const
+{
+   if (this->icon == "01d")
+       return ":/new/prefix1/icons/weather-sunny.png";
+   else if (this->icon == "01n")
+       return ":/new/prefix1/icons/weather-sunny.png";
+   else if (this->icon == "02d")
+       return ":/new/prefix1/icons/weather-sunny-very-few-clouds.png";
+   else if (this->icon == "02n")
+       return ":/new/prefix1/icons/weather-sunny-very-few-clouds.png";
+   else if (this->icon == "03d")
+       return ":/new/prefix1/icons/weather-overcast.png";
+   else if (this->icon == "03n")
+       return ":/new/prefix1/icons/weather-overcast.png";
+   else if (this->icon == "04d")
+       return ":/new/prefix1/icons/weather-overcast.png";
+   else if (this->icon == "04n")
+       return ":/new/prefix1/icons/weather-overcast.png";
+   else if (this->icon == "09d")
+       return ":/new/prefix1/icons/weather-showers.png";
+   else if (this->icon == "09n")
+       return ":/new/prefix1/icons/weather-showers.png";
+   else if (this->icon == "10d")
+       return ":/new/prefix1/icons/weather-showers.png";
+   else if (this->icon == "10n")
+       return ":/new/prefix1/icons/weather-showers.png";
+   else if (this->icon == "11d")
+       return ":/new/prefix1/icons/weather-storm.png";
+   else if (this->icon == "11n")
+       return ":/new/prefix1/icons/weather-storm.png";
+   else if (this->icon == "13d")
+       return ":/new/prefix1/icons/weather-snow.png";
+   else if (this->icon == "13n")
+       return ":/new/prefix1/icons/weather-snow.png";
+   else if (this->icon == "50d")
+       return ":/new/prefix1/icons/weather-fog.png";
+   else if (this->icon == "50n")
+       return ":/new/prefix1/icons/weather-fog.png";
+   else
+       return "Brak ikony!";
+}
 QString DanePogodowe::Wyswietl()
 {
     return  "name = " +
