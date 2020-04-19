@@ -15,17 +15,35 @@ GlowneOkno::GlowneOkno(QWidget *parent)
             aktualny_dzien_tyg = aktualna.toString("dddd");
     aktualny_dzien_tyg[0] = aktualny_dzien_tyg.at(0).toTitleCase();
     ui->setupUi(this);
-    ui->label->setText(this->Miasto);
-    ui->textEdit->setText("Brak");
-    ui->textEdit->setReadOnly(true);
+    ui->nazwa_miasta->setText(this->Miasto);
     ui->aktualna_godzina->setText(aktualna_godz);
     ui->data->setText(aktualna_data);
     ui->dzien_tygodnia->setText(aktualny_dzien_tyg);
+    ui->dzien_prognoza_1->setText(aktualna.addDays(1).toString("ddd"));
+    ui->dzien_prognoza_2->setText(aktualna.addDays(2).toString("ddd"));
+    ui->dzien_prognoza_3->setText(aktualna.addDays(3).toString("ddd"));
+    ui->dzien_prognoza_4->setText(aktualna.addDays(4).toString("ddd"));
+    ui->dzien_prognoza_5->setText(aktualna.addDays(5).toString("ddd"));
     manager = new QNetworkAccessManager();
-    QObject::connect(manager, SIGNAL(finished(QNetworkReply*)),
-           this, SLOT(managerFinished(QNetworkReply*)));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(managerFinished(QNetworkReply*)));
     request.setUrl(QUrl(QString("http://api.openweathermap.org/data/2.5/weather?id=")+Miasto+QString("&appid=")+APPID));
-    manager->get(request);
+    QNetworkReply *netReply = manager->get(request);
+    QEventLoop loop;
+    connect(netReply, SIGNAL(finished()), &loop, SLOT(quit()));
+    ui->statusbar->showMessage("Łączenie z OpenWeather...",100);
+    loop.exec();
+    ui->statusbar->showMessage("Połączono!",10);
+    ui->nazwa_miasta->setText("Wrocław");
+    QString ikonatekst = PogodaDzis.IkonaPogody();
+    QPixmap ikonaPogoda(ikonatekst),
+            mapa(":/ikony_openweather/ikony/Bardo.PNG");
+    ui->ikona_pogody_teraz->setPixmap(ikonaPogoda.scaled(100,100, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    //ui->ikona_pogody_teraz->setPixmap(ikonaPogoda.scaled(100,100,Qt::IgnoreAspectRatio));
+    ui->mapa_lokalizacji->setPixmap(mapa.scaled(100,100,Qt::IgnoreAspectRatio));
+    ui->ikona_pogody_teraz->setAutoFillBackground(true);
+    QPalette pal = ui->ikona_pogody_teraz->palette();
+    pal.setColor(QPalette::Window, QColor(Qt::white));
+    ui->ikona_pogody_teraz->setPalette(pal);
 }
 
 GlowneOkno::~GlowneOkno()
@@ -56,8 +74,15 @@ void GlowneOkno::managerFinished(QNetworkReply *reply){
     }
     //qDebug() << jsonDoc.toJson(QJsonDocument::Indented);
     this->PogodaDzis.daneZmienione(jsonDoc);
-    //ui->textEdit->setText(jsonDoc.toJson(QJsonDocument::Indented));
-    ui->textEdit->setText(this->PogodaDzis.Wyswietl());
+    //ui->tmp_text->setText(this->PogodaDzis.Wyswietl());
+    ui->temperatura_srednia->setText(QString::number(this->PogodaDzis.Temperatura())+" °C");
+    ui->temperatura_odczuwalna->setText(QString::number(this->PogodaDzis.TemperaturaOdczuwalna())+" °C");
+    ui->temperatura_minimalna->setText(QString::number(this->PogodaDzis.TemperaturaMin())+" °C");
+    ui->temperatura_maxymalna->setText(QString::number(this->PogodaDzis.TemperaturaMax())+" °C");
+    ui->cisnienie->setText(QString::number(this->PogodaDzis.Cisnienie())+" hPa");
+    ui->wilgotnosc_powietrza->setText(QString::number(this->PogodaDzis.Wilgotnosc())+" %");
+    ui->kierunek_wiatru->setText(QString::number(this->PogodaDzis.KatWiatru())+" °");
+    ui->predkosc_wiatru->setText(QString::number(this->PogodaDzis.PredkoscWiatru())+" km/h");
 }
 
 void GlowneOkno::on_actionWy_wietl_pomoc_triggered()
@@ -74,10 +99,13 @@ void GlowneOkno::on_actionNysa_K_odzka_w_Bardzie_triggered()
     QEventLoop loop;
     connect(netReply, SIGNAL(finished()), &loop, SLOT(quit()));
     loop.exec();
-    ui->label->setText("Nysa Kłodzka w Bardzie");
+    ui->nazwa_miasta->setText("Nysa Kłodzka w Bardzie");
     QString ikonatekst = PogodaDzis.IkonaPogody();
-    ui->statusbar->showMessage(ikonatekst);
+    //ui->statusbar->showMessage(ikonatekst);
     QPixmap ikonaPogoda(ikonatekst);
-    //QPixmap ikonaPogoda(":/new/prefix1/icons/weather-fog.png");
-    ui->label_2->setPixmap(ikonaPogoda.scaled(100,100,Qt::IgnoreAspectRatio));
+    ui->ikona_pogody_teraz->setPixmap(ikonaPogoda.scaled(100,100,Qt::IgnoreAspectRatio));
+    ui->ikona_pogody_teraz->setAutoFillBackground(true);
+    QPalette pal = ui->ikona_pogody_teraz->palette();
+    pal.setColor(QPalette::Window, QColor(Qt::white));
+    ui->ikona_pogody_teraz->setPalette(pal);
 }

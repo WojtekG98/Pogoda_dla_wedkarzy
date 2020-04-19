@@ -42,49 +42,89 @@ double DanePogodowe::TemperaturaMax() const
     return this->temp_max;
 }
 
+double DanePogodowe::TemperaturaMin() const
+{
+    return this->temp_min;
+}
+
+double DanePogodowe::PredkoscWiatru() const
+{
+    return this->speed;
+}
+
+unsigned int DanePogodowe::Wilgotnosc() const
+{
+    return this->humidity;
+}
+
+unsigned int DanePogodowe::Cisnienie() const
+{
+    return this->pressure;
+}
+
+unsigned int DanePogodowe::KatWiatru() const
+{
+    return this->deg;
+}
+
+QTime DanePogodowe::CzasWschod() const
+{
+    return this->sunrise;
+}
+
+QTime DanePogodowe::CzasZachod() const
+{
+    return this->sunset;
+}
+
 QString DanePogodowe::NazwaMiasta() const
 {
     return this->name;
 }
 
+QString DanePogodowe::OpisPogody() const
+{
+    return this->description;
+}
+
 QString DanePogodowe::IkonaPogody() const
 {
    if (this->icon == "01d")
-       return ":/new/prefix1/icons/weather-sunny.png";
+       return ":/ikony_openweather/ikony/01d.png";
    else if (this->icon == "01n")
-       return ":/new/prefix1/icons/weather-sunny.png";
+       return ":/ikony_openweather/ikony/01n.png";
    else if (this->icon == "02d")
-       return ":/new/prefix1/icons/weather-sunny-very-few-clouds.png";
+       return ":/ikony_openweather/ikony/02d.png";
    else if (this->icon == "02n")
-       return ":/new/prefix1/icons/weather-sunny-very-few-clouds.png";
+       return ":/ikony_openweather/ikony/02n.png";
    else if (this->icon == "03d")
-       return ":/new/prefix1/icons/weather-overcast.png";
+       return ":/ikony_openweather/ikony/03d.png";
    else if (this->icon == "03n")
-       return ":/new/prefix1/icons/weather-overcast.png";
+       return ":/ikony_openweather/ikony/03d.png";
    else if (this->icon == "04d")
-       return ":/new/prefix1/icons/weather-overcast.png";
+       return ":/ikony_openweather/ikony/04d.png";
    else if (this->icon == "04n")
-       return ":/new/prefix1/icons/weather-overcast.png";
+       return ":/ikony_openweather/ikony/04d.png";
    else if (this->icon == "09d")
-       return ":/new/prefix1/icons/weather-showers.png";
+       return ":/ikony_openweather/ikony/09d.png";
    else if (this->icon == "09n")
-       return ":/new/prefix1/icons/weather-showers.png";
+       return ":/ikony_openweather/ikony/09d.png";
    else if (this->icon == "10d")
-       return ":/new/prefix1/icons/weather-showers.png";
+       return ":/ikony_openweather/ikony/10d.png";
    else if (this->icon == "10n")
-       return ":/new/prefix1/icons/weather-showers.png";
+       return ":/ikony_openweather/ikony/10n.png";
    else if (this->icon == "11d")
-       return ":/new/prefix1/icons/weather-storm.png";
+       return ":/ikony_openweather/ikony/11d.png";
    else if (this->icon == "11n")
-       return ":/new/prefix1/icons/weather-storm.png";
+       return ":/ikony_openweather/ikony/11d.png";
    else if (this->icon == "13d")
-       return ":/new/prefix1/icons/weather-snow.png";
+       return ":/ikony_openweather/ikony/13d.png";
    else if (this->icon == "13n")
-       return ":/new/prefix1/icons/weather-snow.png";
+       return ":/ikony_openweather/ikony/13d.png";
    else if (this->icon == "50d")
-       return ":/new/prefix1/icons/weather-fog.png";
+       return ":/ikony_openweather/ikony/50d.png";
    else if (this->icon == "50n")
-       return ":/new/prefix1/icons/weather-fog.png";
+       return ":/ikony_openweather/ikony/50d.png";
    else
        return "Brak ikony!";
 }

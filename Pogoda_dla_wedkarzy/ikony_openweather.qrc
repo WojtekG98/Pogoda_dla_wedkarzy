@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/ikony_openweather">
+        <file>ikony/01d.png</file>
+        <file>ikony/01n.png</file>
+        <file>ikony/02d.png</file>
+        <file>ikony/02n.png</file>
+        <file>ikony/03d.png</file>
+        <file>ikony/04d.png</file>
+        <file>ikony/09d.png</file>
+        <file>ikony/10d.png</file>
+        <file>ikony/10n.png</file>
+        <file>ikony/11d.png</file>
+        <file>ikony/13d.png</file>
+        <file>ikony/50d.png</file>
+        <file>ikony/ryba_pusta.png</file>
+        <file>ikony/Bardo.PNG</file>
+    </qresource>
+</RCC>

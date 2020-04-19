@@ -41,4 +41,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    ikony.qrc
+    ikony.qrc \
+    ikony_openweather.qrc
