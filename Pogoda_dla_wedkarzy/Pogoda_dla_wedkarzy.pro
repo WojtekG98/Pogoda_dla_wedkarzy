@@ -17,12 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     danepogodowe.cpp \
+    daneprognoza.cpp \
     main.cpp \
     glowneokno.cpp \
     pomoc.cpp
 
 HEADERS += \
     danepogodowe.h \
+    daneprognoza.h \
     glowneokno.h \
     pomoc.h
 

@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>793</width>
-    <height>597</height>
+    <width>1058</width>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>GlowneOkno</string>
+   <string>Pogoda dla wędkarzy</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ikony_openweather.qrc">
+    <normaloff>:/ikony_openweather/ikony/ryba_pusta.png</normaloff>:/ikony_openweather/ikony/ryba_pusta.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="1,0,1">
@@ -20,7 +24,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1">
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_3">
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,1,1,0,1">
           <item alignment="Qt::AlignHCenter|Qt::AlignTop">
            <widget class="QLabel" name="nazwa_miasta">
             <property name="text">
@@ -30,18 +34,30 @@
           </item>
           <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="mapa_lokalizacji">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/Bardo.PNG&quot;; height=&quot;100&quot;  width=&quot;100&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/Bardo.PNG&quot;; /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
           <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="ikona_pogody_teraz">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>1</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
             <property name="autoFillBackground">
              <bool>true</bool>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/01d.png&quot;;  height=&quot;100&quot;  width=&quot;100&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_qt/icons/weather-sunny.png&quot;;  height=&quot;100&quot;  width=&quot;100&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
@@ -62,7 +78,7 @@
          </layout>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0,1,0,1">
+         <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0,1,0,0,1">
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_10">
             <item alignment="Qt::AlignHCenter">
@@ -89,21 +105,68 @@
            </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <item>
-             <spacer name="horizontalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
+           <layout class="QFormLayout" name="formLayout_2">
+            <item row="0" column="1">
+             <layout class="QVBoxLayout" name="dane_pogodowe_teraz">
+              <item>
+               <widget class="QLineEdit" name="temperatura_srednia">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="temperatura_odczuwalna">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="temperatura_minimalna">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="temperatura_maxymalna">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="cisnienie">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="wilgotnosc_powietrza">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="kierunek_wiatru">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="predkosc_wiatru">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
-            <item>
+            <item row="0" column="0">
              <layout class="QVBoxLayout" name="dane_pogodowe_teraz_txt">
               <item alignment="Qt::AlignRight">
                <widget class="QLabel" name="temperatura_srednia_txt">
@@ -163,79 +226,6 @@
               </item>
              </layout>
             </item>
-            <item>
-             <layout class="QVBoxLayout" name="dane_pogodowe_teraz">
-              <item alignment="Qt::AlignRight">
-               <widget class="QLabel" name="temperatura_srednia">
-                <property name="text">
-                 <string>TextLabel</string>
-                </property>
-               </widget>
-              </item>
-              <item alignment="Qt::AlignRight">
-               <widget class="QLabel" name="temperatura_odczuwalna">
-                <property name="text">
-                 <string>TextLabel</string>
-                </property>
-               </widget>
-              </item>
-              <item alignment="Qt::AlignRight">
-               <widget class="QLabel" name="temperatura_minimalna">
-                <property name="text">
-                 <string>TextLabel</string>
-                </property>
-               </widget>
-              </item>
-              <item alignment="Qt::AlignRight">
-               <widget class="QLabel" name="temperatura_maxymalna">
-                <property name="text">
-                 <string>TextLabel</string>
-                </property>
-               </widget>
-              </item>
-              <item alignment="Qt::AlignRight">
-               <widget class="QLabel" name="cisnienie">
-                <property name="text">
-                 <string>TextLabel</string>
-                </property>
-               </widget>
-              </item>
-              <item alignment="Qt::AlignRight">
-               <widget class="QLabel" name="wilgotnosc_powietrza">
-                <property name="text">
-                 <string>TextLabel</string>
-                </property>
-               </widget>
-              </item>
-              <item alignment="Qt::AlignRight">
-               <widget class="QLabel" name="kierunek_wiatru">
-                <property name="text">
-                 <string>TextLabel</string>
-                </property>
-               </widget>
-              </item>
-              <item alignment="Qt::AlignRight">
-               <widget class="QLabel" name="predkosc_wiatru">
-                <property name="text">
-                 <string>TextLabel</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
            </layout>
           </item>
           <item>
@@ -253,43 +243,118 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item alignment="Qt::AlignTop">
+            <item>
              <widget class="QLabel" name="rybka1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;50&quot;  width=&quot;86&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignJustify|Qt::AlignTop</set>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
               </property>
              </widget>
             </item>
             <item alignment="Qt::AlignTop">
              <widget class="QLabel" name="rybka2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;50&quot;  width=&quot;86&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</string>
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignJustify|Qt::AlignTop</set>
               </property>
              </widget>
             </item>
             <item alignment="Qt::AlignTop">
              <widget class="QLabel" name="rybka3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;50&quot;  width=&quot;86&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignJustify|Qt::AlignTop</set>
               </property>
              </widget>
             </item>
             <item alignment="Qt::AlignTop">
              <widget class="QLabel" name="rybka4">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;50&quot;  width=&quot;86&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignJustify|Qt::AlignTop</set>
               </property>
              </widget>
             </item>
             <item alignment="Qt::AlignTop">
              <widget class="QLabel" name="rybka5">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;50&quot;  width=&quot;86&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string/>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignJustify|Qt::AlignVCenter</set>
               </property>
              </widget>
             </item>
            </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </item>
@@ -310,11 +375,35 @@
        <layout class="QHBoxLayout" name="prognoza_1">
         <item>
          <widget class="QLabel" name="ikona_prognoza_1">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
           <property name="autoFillBackground">
            <bool>true</bool>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/01d.png&quot;;  height=&quot;100&quot;  width=&quot;100&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="ikony.qrc">:/ikony_qt/icons/weather-sunny.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
@@ -437,7 +526,13 @@
            <bool>true</bool>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/01d.png&quot;;  height=&quot;100&quot;  width=&quot;100&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="ikony.qrc">:/ikony_qt/icons/weather-sunny.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -557,13 +652,19 @@
            <bool>true</bool>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/01d.png&quot;;  height=&quot;100&quot;  width=&quot;100&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="ikony.qrc">:/ikony_qt/icons/weather-sunny.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
         <item>
          <layout class="QVBoxLayout" name="dane_prognoza_3_1">
-          <item>
+          <item alignment="Qt::AlignHCenter">
            <widget class="QLabel" name="temperatura_prognoza_3">
             <property name="text">
              <string>-°C</string>
@@ -678,28 +779,34 @@
            <bool>true</bool>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/01d.png&quot;;  height=&quot;100&quot;  width=&quot;100&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="ikony.qrc">:/ikony_qt/icons/weather-sunny.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_8">
           <item alignment="Qt::AlignHCenter">
-           <widget class="QLabel" name="label_26">
+           <widget class="QLabel" name="temperatura_prognoza_4">
             <property name="text">
              <string>-°C</string>
             </property>
            </widget>
           </item>
           <item alignment="Qt::AlignHCenter">
-           <widget class="QLabel" name="label_27">
+           <widget class="QLabel" name="kierunek_wiatru_prognoza_4">
             <property name="text">
              <string>&lt;-</string>
             </property>
            </widget>
           </item>
           <item alignment="Qt::AlignHCenter">
-           <widget class="QLabel" name="label_28">
+           <widget class="QLabel" name="predkosc_wiatru_prognoza_4">
             <property name="text">
              <string>- km/h</string>
             </property>
@@ -717,7 +824,7 @@
            </widget>
           </item>
           <item alignment="Qt::AlignHCenter">
-           <widget class="QLabel" name="label_66">
+           <widget class="QLabel" name="cisnienie_prognoza_4">
             <property name="text">
              <string>- hPa</string>
             </property>
@@ -798,7 +905,13 @@
            <bool>true</bool>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/01d.png&quot;;  height=&quot;100&quot;  width=&quot;100&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="ikony.qrc">:/ikony_qt/icons/weather-sunny.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -913,7 +1026,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>793</width>
+     <width>1058</width>
      <height>21</height>
     </rect>
    </property>
@@ -960,6 +1073,9 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="ikony_openweather.qrc"/>
+  <include location="ikony.qrc"/>
+ </resources>
  <connections/>
 </ui>

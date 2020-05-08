@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/new/prefix1">
+    <qresource prefix="/ikony_qt">
         <file>icons/weather-few-clouds.png</file>
         <file>icons/weather-fog.png</file>
         <file>icons/weather-haze.png</file>

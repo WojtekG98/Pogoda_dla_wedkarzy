@@ -3,10 +3,10 @@
 
 #include <QMainWindow>
 #include <QtNetwork>
+#include <QDateTime>
 #include "pomoc.h"
 #include "danepogodowe.h"
-
-
+#include "daneprognoza.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class GlowneOkno; }
@@ -30,6 +30,7 @@ private:
     Ui::GlowneOkno *ui;
     Pomoc *pomoc;
     DanePogodowe PogodaDzis;
+    DanePrognoza Prognoza;
     QNetworkAccessManager *manager;
     QNetworkRequest request;
     QString APPID = "f2e1064de8457c7d5680e0e1925d5f86";

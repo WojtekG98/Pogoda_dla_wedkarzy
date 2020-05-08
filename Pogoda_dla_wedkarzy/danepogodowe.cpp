@@ -87,46 +87,92 @@ QString DanePogodowe::OpisPogody() const
     return this->description;
 }
 
-QString DanePogodowe::IkonaPogody() const
+QString DanePogodowe::IkonaPogody(uint8_t flag) const
 {
-   if (this->icon == "01d")
-       return ":/ikony_openweather/ikony/01d.png";
-   else if (this->icon == "01n")
-       return ":/ikony_openweather/ikony/01n.png";
-   else if (this->icon == "02d")
-       return ":/ikony_openweather/ikony/02d.png";
-   else if (this->icon == "02n")
-       return ":/ikony_openweather/ikony/02n.png";
-   else if (this->icon == "03d")
-       return ":/ikony_openweather/ikony/03d.png";
-   else if (this->icon == "03n")
-       return ":/ikony_openweather/ikony/03d.png";
-   else if (this->icon == "04d")
-       return ":/ikony_openweather/ikony/04d.png";
-   else if (this->icon == "04n")
-       return ":/ikony_openweather/ikony/04d.png";
-   else if (this->icon == "09d")
-       return ":/ikony_openweather/ikony/09d.png";
-   else if (this->icon == "09n")
-       return ":/ikony_openweather/ikony/09d.png";
-   else if (this->icon == "10d")
-       return ":/ikony_openweather/ikony/10d.png";
-   else if (this->icon == "10n")
-       return ":/ikony_openweather/ikony/10n.png";
-   else if (this->icon == "11d")
-       return ":/ikony_openweather/ikony/11d.png";
-   else if (this->icon == "11n")
-       return ":/ikony_openweather/ikony/11d.png";
-   else if (this->icon == "13d")
-       return ":/ikony_openweather/ikony/13d.png";
-   else if (this->icon == "13n")
-       return ":/ikony_openweather/ikony/13d.png";
-   else if (this->icon == "50d")
-       return ":/ikony_openweather/ikony/50d.png";
-   else if (this->icon == "50n")
-       return ":/ikony_openweather/ikony/50d.png";
-   else
-       return "Brak ikony!";
+    if (flag==0)
+    {
+        if (this->icon == "01d")
+            return ":/ikony_openweather/ikony/01d.png";
+        else if (this->icon == "01n")
+            return ":/ikony_openweather/ikony/01n.png";
+        else if (this->icon == "02d")
+            return ":/ikony_openweather/ikony/02d.png";
+        else if (this->icon == "02n")
+            return ":/ikony_openweather/ikony/02n.png";
+        else if (this->icon == "03d")
+            return ":/ikony_openweather/ikony/03d.png";
+        else if (this->icon == "03n")
+            return ":/ikony_openweather/ikony/03d.png";
+        else if (this->icon == "04d")
+            return ":/ikony_openweather/ikony/04d.png";
+        else if (this->icon == "04n")
+            return ":/ikony_openweather/ikony/04d.png";
+        else if (this->icon == "09d")
+            return ":/ikony_openweather/ikony/09d.png";
+        else if (this->icon == "09n")
+            return ":/ikony_openweather/ikony/09d.png";
+        else if (this->icon == "10d")
+            return ":/ikony_openweather/ikony/10d.png";
+        else if (this->icon == "10n")
+            return ":/ikony_openweather/ikony/10n.png";
+        else if (this->icon == "11d")
+            return ":/ikony_openweather/ikony/11d.png";
+        else if (this->icon == "11n")
+            return ":/ikony_openweather/ikony/11d.png";
+        else if (this->icon == "13d")
+            return ":/ikony_openweather/ikony/13d.png";
+        else if (this->icon == "13n")
+            return ":/ikony_openweather/ikony/13d.png";
+        else if (this->icon == "50d")
+            return ":/ikony_openweather/ikony/50d.png";
+        else if (this->icon == "50n")
+            return ":/ikony_openweather/ikony/50d.png";
+        else
+            return "Brak ikony!";
+    }
+    else if(flag == 1)
+    {
+        if (this->icon == "01d")
+            return ":/ikony_qt/icons/weather-sunny.png";
+        else if (this->icon == "01n")
+            return ":/ikony_qt/icons/weather-sunny.png";
+        else if (this->icon == "02d")
+            return ":/ikony_qt/icons/weather-sunny-very-few-clouds.png";
+        else if (this->icon == "02n")
+            return ":/ikony_qt/icons/weather-sunny-very-few-clouds.png";
+        else if (this->icon == "03d")
+            return ":/ikony_qt/icons/weather-overcast.png";
+        else if (this->icon == "03n")
+            return ":/ikony_qt/icons/weather-overcast.png";
+        else if (this->icon == "04d")
+            return ":/ikony_qt/icons/weather-overcast.png";
+        else if (this->icon == "04n")
+            return ":/ikony_qt/icons/weather-overcast.png";
+        else if (this->icon == "09d")
+            return ":/ikony_qt/icons/weather-showers.png";
+        else if (this->icon == "09n")
+            return ":/ikony_qt/icons/weather-showers.png";
+        else if (this->icon == "10d")
+            return ":/ikony_qt/icons/weather-showers.png";
+        else if (this->icon == "10n")
+            return ":/ikony_qt/icons/weather-showers.png";
+        else if (this->icon == "11d")
+            return ":/ikony_qt/icons/weather-storm.png";
+        else if (this->icon == "11n")
+            return ":/ikony_qt/icons/weather-storm.png";
+        else if (this->icon == "13d")
+            return ":/ikony_qt/icons/weather-icy.png";
+        else if (this->icon == "13n")
+            return ":/ikony_qt/icons/weather-icy.png";
+        else if (this->icon == "50d")
+            return ":/ikony_qt/icons/weather-fog.png";
+        else if (this->icon == "50n")
+            return ":/ikony_qt/icons/weather-fog.png";
+        else
+            return "Brak ikony!";
+    }
+    else
+        return "Błędna flaga!";
 }
 QString DanePogodowe::Wyswietl()
 {

@@ -28,7 +28,7 @@ public:
     QTime CzasZachod() const;
     QString NazwaMiasta() const;
     QString OpisPogody() const;
-    QString IkonaPogody() const;
+    QString IkonaPogody(uint8_t flag) const;
     QString Wyswietl();
 private:
     double feels_like;
