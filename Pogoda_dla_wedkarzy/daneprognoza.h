@@ -14,65 +14,17 @@ class DanePrognoza : public QObject
     Q_OBJECT
 public:
     explicit DanePrognoza(QObject *parent = nullptr);
-    double Temperatura_1() const{
-        return this->temp[0];
+    double * Temperatura(){
+        return this->temp;
     }
-    double Temperatura_2() const{
-        return this->temp[1];
+    double * PredkoscWiatru(){
+        return this->speed;
     }
-    double Temperatura_3() const{
-        return this->temp[2];
+    unsigned int * KatWiatru(){
+        return this->deg;
     }
-    double Temperatura_4() const{
-        return this->temp[3];
-    }
-    double Temperatura_5() const{
-        return this->temp[4];
-    }
-    double PredkoscWiatru_1() const{
-        return this->speed[0];
-    }
-    double PredkoscWiatru_2() const{
-        return this->speed[1];
-    }
-    double PredkoscWiatru_3() const{
-        return this->speed[2];
-    }
-    double PredkoscWiatru_4() const{
-        return this->speed[3];
-    }
-    double PredkoscWiatru_5() const{
-        return this->speed[4];
-    }
-    unsigned int KatWiatru_1() const{
-        return this->deg[0];
-    }
-    unsigned int KatWiatru_2() const{
-        return this->deg[1];
-    }
-    unsigned int KatWiatru_3() const{
-        return this->deg[2];
-    }
-    unsigned int KatWiatru_4() const{
-        return this->deg[3];
-    }
-    unsigned int KatWiatru_5() const{
-        return this->deg[4];
-    }
-    unsigned int Cisnienie_1() const{
-        return this->pressure[0];
-    }
-    unsigned int Cisnienie_2() const{
-        return this->pressure[1];
-    }
-    unsigned int Cisnienie_3() const{
-        return this->pressure[2];
-    }
-    unsigned int Cisnienie_4() const{
-        return this->pressure[3];
-    }
-    unsigned int Cisnienie_5() const{
-        return this->pressure[4];
+    unsigned int * Cisnienie(){
+        return this->pressure;
     }
     QString IkonaPogody_1(uint8_t flag){
         return StringToIcon(this->icon[0], flag);

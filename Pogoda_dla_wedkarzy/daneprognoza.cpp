@@ -101,7 +101,7 @@ void DanePrognoza::prognozaZmieniona(QJsonDocument dane)
 
     for(int i = 0; i < 5; i++){
         aktualna_data_str = aktualna.addDays(i+1).toString("yyyy-MM-dd") + QString(" 12:00:00");
-        while(list.first().toObject()["dt_txt"].toString() != aktualna_data_str)
+        while(list.first().toObject()["dt_txt"].toString() != aktualna_data_str && list.size() != 1)
             list.removeFirst();
         QJsonObject main = list.first()["main"].toObject();
         QJsonObject wind = list.first()["wind"].toObject();
@@ -110,6 +110,6 @@ void DanePrognoza::prognozaZmieniona(QJsonDocument dane)
         this->speed[i] = wind["speed"].toDouble();
         this->deg[i] = wind["deg"].toInt();
         this->pressure[i] = main["pressure"].toInt();
-        this->icon[i] = weather.first()["icon"].toString();//list.first().toObject()["dt_txt"].toString();
+        this->icon[i] = weather.first()["icon"].toString();
     }
 }

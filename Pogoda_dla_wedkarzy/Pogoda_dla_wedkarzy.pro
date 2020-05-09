@@ -20,16 +20,19 @@ SOURCES += \
     daneprognoza.cpp \
     main.cpp \
     glowneokno.cpp \
+    okresyochronne.cpp \
     pomoc.cpp
 
 HEADERS += \
     danepogodowe.h \
     daneprognoza.h \
     glowneokno.h \
+    okresyochronne.h \
     pomoc.h
 
 FORMS += \
     glowneokno.ui \
+    okresyochronne.ui \
     pomoc.ui
 
 TRANSLATIONS += \

@@ -7,6 +7,7 @@
 #include "pomoc.h"
 #include "danepogodowe.h"
 #include "daneprognoza.h"
+#include "okresyochronne.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class GlowneOkno; }
@@ -26,9 +27,16 @@ private slots:
     void on_actionWy_wietl_pomoc_triggered();
     void on_actionNysa_K_odzka_w_Bardzie_triggered();
 
+    void on_actionDunajec_Czch_w_triggered();
+
+    void on_action_odswiez_triggered();
+
+    void on_actionWy_wietl_triggered();
+
 private:
     Ui::GlowneOkno *ui;
     Pomoc *pomoc;
+    OkresyOchronne *okresyochronne;
     DanePogodowe PogodaDzis;
     DanePrognoza Prognoza;
     QNetworkAccessManager *manager;

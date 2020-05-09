@@ -14,5 +14,10 @@
         <file>ikony/50d.png</file>
         <file>ikony/ryba_pusta.png</file>
         <file>ikony/Bardo.PNG</file>
+        <file>ikony/dir.png</file>
+        <file>ikony/czchow.png</file>
+        <file>ikony/refresh.png</file>
+        <file>ikony/ryba_pelna.png</file>
+        <file>ikony/help.png</file>
     </qresource>
 </RCC>

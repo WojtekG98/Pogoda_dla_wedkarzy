@@ -17,7 +17,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Pomoc</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ikony_openweather.qrc">
+    <normaloff>:/ikony_openweather/ikony/help.png</normaloff>:/ikony_openweather/ikony/help.png</iconset>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -33,6 +37,8 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="ikony_openweather.qrc"/>
+ </resources>
  <connections/>
 </ui>
