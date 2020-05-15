@@ -37,18 +37,50 @@ GlowneOkno::GlowneOkno(QWidget *parent)
     QString ikonatekst = PogodaDzis.IkonaPogody(1);
     QPixmap ikonaPogoda(ikonatekst),
             mapa(":/ikony_openweather/ikony/Bardo.PNG");
-    int w = ui->mapa_lokalizacji->width(),
-            h = ui->mapa_lokalizacji->height();
     ui->ikona_pogody_teraz->setPixmap(ikonaPogoda.scaled(100, 100, Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->mapa_lokalizacji->setPixmap(mapa.scaled(w,h,Qt::KeepAspectRatio));
-    w = ui->rybka1->width();
-    h = ui->rybka1->height();
+    ui->mapa_lokalizacji->setPixmap(mapa.scaled(300, 300, Qt::KeepAspectRatio));
+    int w = ui->rybka1->width();
+    int h = ui->rybka1->height();
     QPixmap rybka(":/ikony_openweather/ikony/ryba_pelna.png");
     ui->rybka1->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
     ui->rybka2->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
     ui->rybka3->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
     ui->rybka4->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
     ui->rybka5->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_1_1->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_1_2->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_1_3->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_1_4->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_1_5->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_2_1->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_2_2->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_2_3->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_2_4->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_2_5->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_3_1->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_3_2->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_3_3->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_3_4->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_3_5->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_4_1->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_4_2->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_4_3->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_4_4->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_4_5->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_5_1->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_5_2->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_5_3->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_5_4->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rybka_prognoza_5_5->setPixmap(rybka.scaled(w,h,Qt::KeepAspectRatio));
+    okresyochronne = new OkresyOchronne(this);
+    QString okresy = "";
+    while (okresyochronne->Okresy_ochronne_list.size() != 0)
+    {
+        okresy += okresyochronne->Okresy_ochronne_list.first()["name"].toString() + "\n";
+        okresyochronne->Okresy_ochronne_list.removeFirst();
+    }
+    ui->gatunki_chronione->setText(okresy);
+    delete  okresyochronne;
 
 }
 
@@ -70,7 +102,7 @@ void GlowneOkno::managerFinished(QNetworkReply *reply){
 
     if (reply->url() == QUrl(QString("http://api.openweathermap.org/data/2.5/weather?id=")+Miasto+QString("&appid=")+APPID))
     {
-        QString path = QCoreApplication::applicationDirPath() + QString("/pogoda.txt");
+        QString path = ":/ikony_openweather/ikony/pogoda.txt";//QCoreApplication::applicationDirPath() + QString("/pogoda.txt");
         QFile file(path);
         if(!file.open(QIODevice::WriteOnly)){
             file.close();
@@ -87,13 +119,16 @@ void GlowneOkno::managerFinished(QNetworkReply *reply){
         ui->cisnienie->setText(QString::number(this->PogodaDzis.Cisnienie())+" hPa");
         ui->wilgotnosc_powietrza->setText(QString::number(this->PogodaDzis.Wilgotnosc())+" %");
         ui->kierunek_wiatru->setText(QString::number(this->PogodaDzis.KatWiatru())+" °");
-        ui->predkosc_wiatru->setText(QString::number(this->PogodaDzis.PredkoscWiatru())+" km/h");
+        int val=int((this->PogodaDzis.KatWiatru()/22.5)+.5);
+        QString arr[16] = {"Pn.","Pn.-Wsch.","Wsch.", "Pd.-Wsch.", "Pd.", "Pd.-Zach.", "Zach.", "Pn.-Zach."};
+        ui->kierunek_wiatru->setText(arr[val%8]);
+        ui->predkosc_wiatru->setText(QString::number(this->PogodaDzis.PredkoscWiatru()*3.6)+" km/h");
         QPixmap ikonaPogoda(PogodaDzis.IkonaPogody(1));
         ui->ikona_pogody_teraz->setPixmap(ikonaPogoda.scaled(100,100, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     }
     else if (reply->url() ==QUrl(QString("http://api.openweathermap.org/data/2.5/forecast?id=")+Miasto+QString("&appid=")+APPID))
     {
-        QString path = QCoreApplication::applicationDirPath() + QString("/prognoza.txt");
+        QString path = ":/ikony_openweather/ikony/prognoza.txt";//QCoreApplication::applicationDirPath() + QString("/prognoza.txt");
         QFile file(path);
         if(!file.open(QIODevice::WriteOnly)){
             file.close();
@@ -112,11 +147,11 @@ void GlowneOkno::managerFinished(QNetworkReply *reply){
         ui->temperatura_prognoza_3->setText(QString::number(temperatura[2])+" °C");
         ui->temperatura_prognoza_4->setText(QString::number(temperatura[3])+" °C");
         ui->temperatura_prognoza_5->setText(QString::number(temperatura[4])+" °C");
-        ui->predkosc_wiatru_prognoza_1->setText(QString::number(predkosc[0])+" km/h");
-        ui->predkosc_wiatru_prognoza_2->setText(QString::number(predkosc[1])+" km/h");
-        ui->predkosc_wiatru_prognoza_3->setText(QString::number(predkosc[2])+" km/h");
-        ui->predkosc_wiatru_prognoza_4->setText(QString::number(predkosc[3])+" km/h");
-        ui->predkosc_wiatru_prognoza_5->setText(QString::number(predkosc[4])+" km/h");
+        ui->predkosc_wiatru_prognoza_1->setText(QString::number(predkosc[0]*3.6)+" km/h");
+        ui->predkosc_wiatru_prognoza_2->setText(QString::number(predkosc[1]*3.6)+" km/h");
+        ui->predkosc_wiatru_prognoza_3->setText(QString::number(predkosc[2]*3.6)+" km/h");
+        ui->predkosc_wiatru_prognoza_4->setText(QString::number(predkosc[3]*3.6)+" km/h");
+        ui->predkosc_wiatru_prognoza_5->setText(QString::number(predkosc[4]*3.6)+" km/h");
         ui->cisnienie_prognoza_1->setText(QString::number(cisnienie[0]) + " hPa");
         ui->cisnienie_prognoza_2->setText(QString::number(cisnienie[1]) + " hPa");
         ui->cisnienie_prognoza_3->setText(QString::number(cisnienie[2]) + " hPa");
@@ -172,7 +207,7 @@ void GlowneOkno::on_actionNysa_K_odzka_w_Bardzie_triggered()
     loop2.exec();
     ui->nazwa_miasta->setText("Nysa Kłodzka w Bardzie");
     QPixmap mapa(":/ikony_openweather/ikony/Bardo.PNG");
-    ui->mapa_lokalizacji->setPixmap(mapa.scaled(100,100,Qt::KeepAspectRatio));
+    ui->mapa_lokalizacji->setPixmap(mapa.scaled(300,300,Qt::KeepAspectRatio));
 }
 
 void GlowneOkno::on_actionDunajec_Czch_w_triggered()
@@ -190,9 +225,12 @@ void GlowneOkno::on_actionDunajec_Czch_w_triggered()
     loop2.exec();
     ui->nazwa_miasta->setText("Dunajec - Czhów");
     QPixmap mapa(":/ikony_openweather/ikony/czchow.png");
-    ui->mapa_lokalizacji->setPixmap(mapa.scaled(100,100,Qt::KeepAspectRatio));
+    ui->mapa_lokalizacji->setPixmap(mapa.scaled(300,300,Qt::KeepAspectRatio));
 }
 
+/*!
+ * \brief GlowneOkno::on_action_odswiez_triggered
+ */
 void GlowneOkno::on_action_odswiez_triggered()
 {
     QDateTime aktualna = QDateTime::currentDateTime();

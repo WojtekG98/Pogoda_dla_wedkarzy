@@ -12,7 +12,10 @@
 QT_BEGIN_NAMESPACE
 namespace Ui { class GlowneOkno; }
 QT_END_NAMESPACE
-
+/*!
+ * \brief Klasa GlowneOkno
+ * Klasa dziedzicząca QMainWindow stanowiąca główne okno aplikacji.
+ */
 class GlowneOkno : public QMainWindow
 {
     Q_OBJECT
@@ -22,15 +25,30 @@ public:
     ~GlowneOkno();
 
 private slots:
-
+    /*!
+     * \brief managerFinished
+     * \param reply
+     */
     void managerFinished(QNetworkReply *reply);
+    /*!
+     * \brief on_actionWy_wietl_pomoc_triggered
+     */
     void on_actionWy_wietl_pomoc_triggered();
+    /*!
+     * \brief on_actionNysa_K_odzka_w_Bardzie_triggered
+     */
     void on_actionNysa_K_odzka_w_Bardzie_triggered();
-
+    /*!
+     * \brief on_actionDunajec_Czch_w_triggered
+     */
     void on_actionDunajec_Czch_w_triggered();
-
+    /*!
+     * \brief on_action_odśwież_triggered
+     */
     void on_action_odswiez_triggered();
-
+    /*!
+     * \brief on_action_Wyświetl_triggered
+     */
     void on_actionWy_wietl_triggered();
 
 private:

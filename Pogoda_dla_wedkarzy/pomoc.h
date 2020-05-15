@@ -6,7 +6,10 @@
 namespace Ui {
 class Pomoc;
 }
-
+/*!
+ * \brief Klasa Pomoc
+ * Klasa implementuje okno pomocnicze pomoc.
+ */
 class Pomoc : public QDialog
 {
     Q_OBJECT

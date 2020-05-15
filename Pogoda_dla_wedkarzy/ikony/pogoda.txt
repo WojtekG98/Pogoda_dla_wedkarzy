@@ -1,0 +1,43 @@
+{
+    "base": "stations",
+    "clouds": {
+        "all": 20
+    },
+    "cod": 200,
+    "coord": {
+        "lat": 51.1,
+        "lon": 17.03
+    },
+    "dt": 1589199841,
+    "id": 3081368,
+    "main": {
+        "feels_like": 287,
+        "humidity": 72,
+        "pressure": 999,
+        "temp": 290.61,
+        "temp_max": 292.15,
+        "temp_min": 288.71
+    },
+    "name": "Wroc³aw",
+    "sys": {
+        "country": "PL",
+        "id": 1715,
+        "sunrise": 1589166436,
+        "sunset": 1589221758,
+        "type": 1
+    },
+    "timezone": 7200,
+    "visibility": 10000,
+    "weather": [
+        {
+            "description": "few clouds",
+            "icon": "02d",
+            "id": 801,
+            "main": "Clouds"
+        }
+    ],
+    "wind": {
+        "deg": 360,
+        "speed": 6.2
+    }
+}

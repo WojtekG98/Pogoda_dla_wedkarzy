@@ -19,5 +19,8 @@
         <file>ikony/refresh.png</file>
         <file>ikony/ryba_pelna.png</file>
         <file>ikony/help.png</file>
+        <file>ikony/okresy_ochronne.txt</file>
+        <file>ikony/pogoda.txt</file>
+        <file>ikony/prognoza.txt</file>
     </qresource>
 </RCC>

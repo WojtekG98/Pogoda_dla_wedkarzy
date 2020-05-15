@@ -1,0 +1,133 @@
+{
+  "list":    [
+    {
+      "name":    "Amur",
+      "period":    "brak"
+    },
+    {
+      "name":    "Belona",    
+      "period":    "brak"
+    },
+    {
+      "name":    "Boleń",
+      "period":    "od    1    stycznia    do    30    kwietnia"
+    },
+    {
+      "name":    "Brzana",
+      "period":    "od    1    stycznia    do    30    czerwca"
+    },
+    {
+      "name":    "Certa",
+      "period":    "w    rzece    Wiśle    od    zapory    we    Włocławku    do    jej    ujścia    od    1    września    do    30    listopada;    w    rzece    Wiśle    powyżej    zapory    we    Włocławku    i    w    pozostałych    rzekach    od    1    stycznia    do    30    czerwca."
+    },
+    {
+      "name":    "Dorsz",
+      "period":    "brak"
+    },
+    {
+      "name":    "Głowacica",
+      "period":    "od    1    marca    do    31    maja"
+    },
+    {
+      "name":    "Jaź",
+      "period":    "brak"
+    },
+    {
+      "name":    "Jelec",
+      "period":    "brak"
+    },
+    {
+      "name":    "Karaś",
+      "period":    "brak"
+    },
+    {
+      "name":    "Karp",
+      "period":    "brak"
+    },
+    {
+      "name":    "Kleń",
+      "period":    "brak"
+    },
+    {
+      "name": "Krąp",
+      "period":    "brak"
+    },
+    {
+      "name": "Leszcz",
+      "period":    "brak"
+    },
+    {
+      "name":    "Lin",
+      "period":    "brak"
+    },
+    {
+      "name":    "Lipień",
+      "period":    "od    1    marca    do    31    maja"
+    },
+    {
+      "name":    "Łosoś",
+      "period":    "W    rzece    Wiśle    i    jej    dopływach    powyżej    zapory    we    Włocławku    od    1    października    do    31    grudnia,    w    pozostałym    okresie    obowiązuje    zakaz    połowu    łososia    w    czwartki,    soboty    i    niedziele,    na    odcinku    rzeki    Wisły    od    zapory    we    Włocławku    do    jej    ujścia    od    1    grudnia    do    końca    lutego;    w    okresie    od    1    marca    do    31    sierpnia    obowiązuje    zakaz    połowu    w    piątki,    soboty    i    niedziele,    w    pozostałych    rzekach    od    1    października    do    31    grudnia."
+    },
+    {
+      "name":    "Miętus",
+      "period":    "Na    wszystkich    wodach    z    wyjątkiem    strefy    na    Odrze    od    ujścia    rzeki    Warty    do    granic    z    wodami    morskimi    od    1    grudnia    do    końca    lutego."
+    },
+    {
+      "name":    "Okoń",
+      "period":    "brak"
+    },
+    {
+      "name":    "Płoć",
+      "period":    "brak"
+    },
+    {
+      "name":    "Pstrąg",
+            "period":    "W    przypadku    pstrąga    potokowego    od    1    września    do    31    stycznia    w    rzece    Wiśle    i    jej    dopływach    od    jej    źródeł    do    ujścia    rzeki    San,    w    rzece    San    i    jej    dopływach    oraz    w    rzece    Odrze    i    jej    dopływach    od    granicy    państwowej    z    Republiką    Czeską    do    ujścia    rzeki    Bystrzycy    oraz    w    rzece    Bystrzycy    i    jej    dopływach.    W    pozostałych    wodach    od    1    września    do    31    grudnia.    Okres    ochronny    dla    pstrąga    tęczowego    nie    obowiązuje."
+    },
+    {
+      "name":    "Sandacz",
+      "period":    "od    1    stycznia    do    31    maja"
+    },
+    {
+      "name":    "Sieja",
+      "period":    "od    15    października    do    31    grudnia"
+    },
+    {
+      "name":    "Sielawa",
+      "period":    "brak"
+    },
+    {
+      "name":    "Sum",
+      "period":    "Od    1    listopada    do    30    czerwca*    w    rzece    Odrze    od    ujścia    rzeki    Warty    do    granicy    z    wodami    morskimi    od    1    marca    do    31    maja."
+    },
+    {
+      "name":    "Szczupak",
+      "period":    "Od    1    stycznia    do    30    kwietnia."
+    },
+    {
+      "name":    "Świnka",
+      "period":    "Od    1    stycznia    do    15    maja."
+    },
+    {
+      "name":    "Tołpyga",
+      "period":    "brak"
+    },
+    {
+      "name":    "Troć",
+      "period":    "W    rzece    Wiśle    i    jej    dopływach    powyżej    zapory    we    Włocławku    od    1    października    do    31    grudnia,    w    pozostałym    okresie    obowiązuje    zakaz    połowu    troci    w    czwartki,    soboty    i    niedziele,    na    odcinku    rzeki    Wisły    od    zapory    we    Włocławku    do    jej    ujścia    od    1    grudnia    do    końca    lutego;    w    okresie    od    1    marca    do    31    sierpnia    obowiązuje    zakaz    połowu    w    piątki,    soboty    i    niedziele,    w    pozostałych    rzekach    od    1    października    do    31    grudnia."
+    },        
+    {
+      "name":    "Ukleja",
+      "period":    "brak"
+    },
+    {
+      "name":    "Węgorz",
+      "period":    "brak"
+    },
+    {
+      "name":    "Wzdręga",
+      "period":    "brak"
+    }
+],
+"description":    "Okresy    ochronne    ryb,    to    czas,    w    którym    łowienie    danych    okazów    jest    zabronione.    Okresy    ochronne    ryb    zbiegają    się    w    czasie    przede    wszystkim    z    momentem    największego    rozrodu    danych    gatunków,    kiedy    powinny    być    poddane    szczególnej    ochronie."
+}
