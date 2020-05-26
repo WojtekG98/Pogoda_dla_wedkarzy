@@ -1,6 +1,7 @@
 QT       += core gui network qml quick
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 CONFIG += c++11
 
@@ -21,19 +22,24 @@ SOURCES += \
     main.cpp \
     glowneokno.cpp \
     okresyochronne.cpp \
-    pomoc.cpp
+    pomoc.cpp \
+    qcustomplot.cpp \
+    wykresy.cpp
 
 HEADERS += \
     danepogodowe.h \
     daneprognoza.h \
     glowneokno.h \
     okresyochronne.h \
-    pomoc.h
+    pomoc.h \
+    qcustomplot.h \
+    wykresy.h
 
 FORMS += \
     glowneokno.ui \
     okresyochronne.ui \
-    pomoc.ui
+    pomoc.ui \
+    wykresy.ui
 
 TRANSLATIONS += \
     Pogoda_dla_wedkarzy_pl_PL.ts

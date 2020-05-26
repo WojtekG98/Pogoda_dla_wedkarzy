@@ -22,5 +22,8 @@
         <file>ikony/okresy_ochronne.txt</file>
         <file>ikony/pogoda.txt</file>
         <file>ikony/prognoza.txt</file>
+        <file>ikony/Czchów.PNG</file>
+        <file>ikony/Wrocław.PNG</file>
+        <file>ikony/statistics.png</file>
     </qresource>
 </RCC>

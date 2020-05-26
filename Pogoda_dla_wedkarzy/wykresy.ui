@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Wykresy</class>
+ <widget class="QDialog" name="Wykresy">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Wykresy</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,1">
+   <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+    <widget class="QLabel" name="Nazwa_Miasta">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Wrocław</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCustomPlot" name="WykresTemperatur" native="true"/>
+   </item>
+   <item>
+    <widget class="QCustomPlot" name="WykresWarunkowDoPolowow" native="true"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

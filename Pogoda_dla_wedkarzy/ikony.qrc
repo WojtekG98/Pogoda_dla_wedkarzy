@@ -13,4 +13,19 @@
         <file>icons/weather-sunny-very-few-clouds.png</file>
         <file>icons/weather-thundershower.png</file>
     </qresource>
+    <qresource prefix="/">
+        <file>ryby/boleń.jpg</file>
+        <file>ryby/brzana.jpg</file>
+        <file>ryby/certa.jpg</file>
+        <file>ryby/głowacica.jpg</file>
+        <file>ryby/lipień.jpg</file>
+        <file>ryby/pstrąg.jpg</file>
+        <file>ryby/sandacz.jpg</file>
+        <file>ryby/sieja.jpg</file>
+        <file>ryby/sum.jpg</file>
+        <file>ryby/szczupak.jpg</file>
+        <file>ryby/troć.jpg</file>
+        <file>ryby/łosoś.jpg</file>
+        <file>ryby/świnka.jpg</file>
+    </qresource>
 </RCC>

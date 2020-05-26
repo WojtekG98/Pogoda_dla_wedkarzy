@@ -7,8 +7,6 @@ OkresyOchronne::OkresyOchronne(QWidget *parent) :
 {
     ui->setupUi(this);
     QString data = "";
-    ui->OkresyOchronneTekst->setReadOnly(true);
-    ui->OkresyOchronneTekst->setText("Jest git");
     QFile file(":/ikony_openweather/ikony/okresy_ochronne.txt");
     if(!file.open(QIODevice::ReadOnly))
     {
@@ -35,7 +33,20 @@ OkresyOchronne::OkresyOchronne(QWidget *parent) :
         }
         list.removeFirst();
     }
-    ui->OkresyOchronneTekst->setText(data);
+    ui->Bolen_text->setHtml("<p style=\"text-align: center; font-size:16px\">Boleń:"
+                            "<p style=\"text-align: center\">od 1 stycznia"
+                            "<p style=\"text-align: center\">do 30 kwietnia");
+    ui->Brzana_text->setHtml("<p style=\"text-align: center; font-size:16px\">Brzana:"
+                            "<p style=\"text-align: center\">od 1 stycznia"
+                            "<p style=\"text-align: center\">do 30 czerwca");
+    ui->Certa_text->setHtml("<p style=\"text-align: center; font-size:16px\">Certa:"
+                            "<p style=\"text-align: center\">W rzece Wiśle od zapory we Włocławku do jej ujścia:"
+                            "<p style=\"text-align: center\">od 1 września do 30 listopada"
+                            "<p style=\"text-align: center\">W rzece Wiśle powyżej zapory we Włocławku i w pozostałych rzekach:"
+                            "<p style=\"text-align: center\">od 1 stycznia do 30 czerwca.");
+    //ui->Bolen_text->setText("Boleń:\n od 1 stycznia\n do 30 czerwca");
+    //ui->Bolen_text->setAlignment(Qt::AlignCenter);
+    //ui->OkresyOchronneTekst->setText(data);
 }
 
 OkresyOchronne::~OkresyOchronne()

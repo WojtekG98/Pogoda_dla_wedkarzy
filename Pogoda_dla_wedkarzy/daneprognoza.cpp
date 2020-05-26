@@ -2,6 +2,11 @@
 
 DanePrognoza::DanePrognoza(QObject *parent) : QObject(parent)
 {
+    temp.fill(0,5);
+    speed.fill(0, 5);
+    deg.fill(0,5);
+    pressure.fill(0,5);
+    icon.fill(0,5);
 
 }
 
@@ -98,7 +103,6 @@ void DanePrognoza::prognozaZmieniona(QJsonDocument dane)
     QJsonObject jo = dane.object();
     QJsonArray list = jo["list"].toArray();
     QString aktualna_data_str = aktualna.toString("yyyy-MM-dd") + QString(" 12:00:00");
-
     for(int i = 0; i < 5; i++){
         aktualna_data_str = aktualna.addDays(i+1).toString("yyyy-MM-dd") + QString(" 12:00:00");
         while(list.first().toObject()["dt_txt"].toString() != aktualna_data_str && list.size() != 1)
@@ -106,10 +110,10 @@ void DanePrognoza::prognozaZmieniona(QJsonDocument dane)
         QJsonObject main = list.first()["main"].toObject();
         QJsonObject wind = list.first()["wind"].toObject();
         QJsonArray weather = list.first()["weather"].toArray();
-        this->temp[i] = main["temp"].toDouble() - Kelvin;
-        this->speed[i] = wind["speed"].toDouble();
-        this->deg[i] = wind["deg"].toInt();
-        this->pressure[i] = main["pressure"].toInt();
-        this->icon[i] = weather.first()["icon"].toString();
+        temp[i] = (main["temp"].toDouble() - Kelvin);
+        speed[i] = (wind["speed"].toDouble());
+        deg[i] = (wind["deg"].toInt());
+        pressure[i] = (main["pressure"].toInt());
+        icon[i] = (weather.first()["icon"].toString());
     }
 }

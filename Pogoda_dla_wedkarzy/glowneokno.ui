@@ -24,9 +24,16 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1">
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,0,0,0">
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,1,0,0">
           <item alignment="Qt::AlignHCenter|Qt::AlignTop">
            <widget class="QLabel" name="nazwa_miasta">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>miasto</string>
             </property>
@@ -40,6 +47,18 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>300</width>
+              <height>300</height>
+             </size>
+            </property>
             <property name="text">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/Bardo.PNG&quot;; /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
@@ -47,17 +66,8 @@
           </item>
           <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="ikona_pogody_teraz">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
             <property name="autoFillBackground">
              <bool>true</bool>
-            </property>
-            <property name="text">
-             <string/>
             </property>
             <property name="pixmap">
              <pixmap resource="ikony.qrc">:/ikony_qt/icons/weather-sunny.png</pixmap>
@@ -67,15 +77,25 @@
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignTop">
+          <item alignment="Qt::AlignLeft|Qt::AlignBottom">
            <widget class="QLabel" name="gatunki_chronionie_txt">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>Gatunki chronione:</string>
             </property>
            </widget>
           </item>
-          <item>
+          <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
            <widget class="QLabel" name="gatunki_chronione">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>TextLabel</string>
             </property>
@@ -89,6 +109,19 @@
            <layout class="QHBoxLayout" name="horizontalLayout_10">
             <item alignment="Qt::AlignHCenter">
              <widget class="QLabel" name="aktualna_godzina">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
               <property name="text">
                <string>HH:MM</string>
               </property>
@@ -96,6 +129,13 @@
             </item>
             <item alignment="Qt::AlignHCenter">
              <widget class="QLabel" name="data">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
                <string>DD.MM.RRRR</string>
               </property>
@@ -105,6 +145,13 @@
           </item>
           <item alignment="Qt::AlignHCenter">
            <widget class="QLabel" name="dzien_tygodnia">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>Dzien Tygodnia</string>
             </property>
@@ -116,6 +163,14 @@
              <layout class="QVBoxLayout" name="dane_pogodowe_teraz">
               <item>
                <widget class="QLineEdit" name="temperatura_srednia">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
                 <property name="readOnly">
                  <bool>true</bool>
                 </property>
@@ -123,6 +178,11 @@
               </item>
               <item>
                <widget class="QLineEdit" name="temperatura_odczuwalna">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="readOnly">
                  <bool>true</bool>
                 </property>
@@ -130,6 +190,11 @@
               </item>
               <item>
                <widget class="QLineEdit" name="temperatura_minimalna">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="readOnly">
                  <bool>true</bool>
                 </property>
@@ -137,6 +202,11 @@
               </item>
               <item>
                <widget class="QLineEdit" name="temperatura_maxymalna">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="readOnly">
                  <bool>true</bool>
                 </property>
@@ -144,6 +214,11 @@
               </item>
               <item>
                <widget class="QLineEdit" name="cisnienie">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="readOnly">
                  <bool>true</bool>
                 </property>
@@ -151,6 +226,11 @@
               </item>
               <item>
                <widget class="QLineEdit" name="wilgotnosc_powietrza">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="readOnly">
                  <bool>true</bool>
                 </property>
@@ -158,6 +238,11 @@
               </item>
               <item>
                <widget class="QLineEdit" name="kierunek_wiatru">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="readOnly">
                  <bool>true</bool>
                 </property>
@@ -165,6 +250,11 @@
               </item>
               <item>
                <widget class="QLineEdit" name="predkosc_wiatru">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="readOnly">
                  <bool>true</bool>
                 </property>
@@ -176,6 +266,11 @@
              <layout class="QVBoxLayout" name="dane_pogodowe_teraz_txt">
               <item alignment="Qt::AlignRight">
                <widget class="QLabel" name="temperatura_srednia_txt">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Temperatura średnia:</string>
                 </property>
@@ -183,6 +278,11 @@
               </item>
               <item alignment="Qt::AlignRight">
                <widget class="QLabel" name="temperatura_odczuwalna_txt">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Temperatura odczuwalna:</string>
                 </property>
@@ -190,6 +290,11 @@
               </item>
               <item alignment="Qt::AlignRight">
                <widget class="QLabel" name="temperatura_minimalna_txt">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Temperatura minimalna:</string>
                 </property>
@@ -197,6 +302,11 @@
               </item>
               <item alignment="Qt::AlignRight">
                <widget class="QLabel" name="temperatura_maxymalna_txt">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Temperatura maxymalna:</string>
                 </property>
@@ -204,6 +314,11 @@
               </item>
               <item alignment="Qt::AlignRight">
                <widget class="QLabel" name="cisnienie_txt">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Ciśnienie:</string>
                 </property>
@@ -211,6 +326,14 @@
               </item>
               <item alignment="Qt::AlignRight">
                <widget class="QLabel" name="wilgotnosc_powietrza_txt">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
                 <property name="text">
                  <string>Wilgotność powietrza:</string>
                 </property>
@@ -218,6 +341,11 @@
               </item>
               <item alignment="Qt::AlignRight">
                <widget class="QLabel" name="kierunek_wiatru_txt">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Kierunek wiatru:</string>
                 </property>
@@ -225,6 +353,11 @@
               </item>
               <item alignment="Qt::AlignRight">
                <widget class="QLabel" name="predkosc_wiatru_txt">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="text">
                  <string>Prędkość wiatru:</string>
                 </property>
@@ -241,6 +374,11 @@
               <width>16777215</width>
               <height>22</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>Warunki do połowu ryb:</string>
@@ -378,24 +516,9 @@
     <item>
      <layout class="QVBoxLayout" name="dane_prognoza">
       <item>
-       <layout class="QHBoxLayout" name="prognoza_1" stretch="0,0,0,0">
-        <item>
+       <layout class="QHBoxLayout" name="prognoza_1">
+        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
          <widget class="QLabel" name="ikona_prognoza_1">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="baseSize">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
           <property name="autoFillBackground">
            <bool>true</bool>
           </property>
@@ -408,32 +531,44 @@
           <property name="scaledContents">
            <bool>true</bool>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
          </widget>
         </item>
         <item>
          <layout class="QVBoxLayout" name="dane_prognoza_1_1" stretch="1,1,1">
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="temperatura_prognoza_1">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>-°C</string>
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="kierunek_wiatru_prognoza_1">
             <property name="text">
-             <string>&lt;-</string>
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="ikony_openweather.qrc">:/ikony_openweather/ikony/dir.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
             </property>
            </widget>
           </item>
-          <item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="predkosc_wiatru_prognoza_1">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>- km/h</string>
             </property>
@@ -446,15 +581,27 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="dane_prognoza_1_2">
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="dzien_prognoza_1">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
-             <string>TextLabel</string>
+             <string>niedz.</string>
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="cisnienie_prognoza_1">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>- hPa</string>
             </property>
@@ -464,13 +611,18 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="warunki_prognoza_1" stretch="0,1">
-          <item alignment="Qt::AlignLeft|Qt::AlignTop">
+          <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
            <widget class="QLabel" name="warunki_do_polowu_ryb_prognoza_1">
             <property name="maximumSize">
              <size>
               <width>16777215</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>Warunki do połowu ryb:</string>
@@ -479,35 +631,35 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="rybki_prognoza_1">
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_1_1">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_1_2">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_1_3">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_1_4">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_1_5">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -529,7 +681,7 @@
       </item>
       <item>
        <layout class="QHBoxLayout" name="prognoza_2">
-        <item>
+        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
          <widget class="QLabel" name="ikona_prognoza_2">
           <property name="autoFillBackground">
            <bool>true</bool>
@@ -547,14 +699,21 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="dane_prognoza_2_1">
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="temperatura_prognoza_2">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>-°C</string>
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="kierunek_wiatru_prognoza_2">
             <property name="text">
              <string>&lt;-</string>
@@ -564,8 +723,13 @@
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="predkosc_wiatru_prognoza_2">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>- km/h</string>
             </property>
@@ -575,17 +739,29 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="dane_prognoza_2_2">
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="dzien_prognoza_2">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
-             <string>TextLabel</string>
+             <string>pon.</string>
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="cisnienie_prognoza_2">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
-             <string>- hPa</string>
+             <string>1000 hPa</string>
             </property>
            </widget>
           </item>
@@ -593,13 +769,18 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="warunki_prognoza_2" stretch="0,1">
-          <item alignment="Qt::AlignLeft|Qt::AlignTop">
+          <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
            <widget class="QLabel" name="warunki_do_polowu_ryb_prognoza_2">
             <property name="maximumSize">
              <size>
               <width>16777215</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>Warunki do połowu ryb:</string>
@@ -608,35 +789,35 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="rybki_prognoza_2">
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_2_1">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_2_2">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_2_3">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_2_4">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_2_5">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -658,7 +839,7 @@
       </item>
       <item>
        <layout class="QHBoxLayout" name="prognoza_3">
-        <item>
+        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
          <widget class="QLabel" name="ikona_prognoza_3">
           <property name="autoFillBackground">
            <bool>true</bool>
@@ -676,14 +857,21 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="dane_prognoza_3_1">
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="temperatura_prognoza_3">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>-°C</string>
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="kierunek_wiatru_prognoza_3">
             <property name="text">
              <string>&lt;-</string>
@@ -693,8 +881,13 @@
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="predkosc_wiatru_prognoza_3">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>- km/h</string>
             </property>
@@ -704,17 +897,29 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="dane_prognoza_3_2">
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="dzien_prognoza_3">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
-             <string>TextLabel</string>
+             <string>wt.</string>
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="cisnienie_prognoza_3">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
-             <string>- hPa</string>
+             <string>1000 hPa</string>
             </property>
            </widget>
           </item>
@@ -722,13 +927,18 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="warunki_prognoza_3" stretch="0,1">
-          <item alignment="Qt::AlignLeft|Qt::AlignTop">
+          <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
            <widget class="QLabel" name="warunki_do_polowu_ryb_prognoza_3">
             <property name="maximumSize">
              <size>
               <width>16777215</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>Warunki do połowu ryb:</string>
@@ -737,28 +947,28 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="rybki_prognoza_3">
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_3_1">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_3_2">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_3_3">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_3_4">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -766,7 +976,7 @@
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_3_5">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -788,7 +998,7 @@
       </item>
       <item>
        <layout class="QHBoxLayout" name="prognoza_4">
-        <item>
+        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
          <widget class="QLabel" name="ikona_prognoza_4">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -814,12 +1024,19 @@
          <layout class="QVBoxLayout" name="verticalLayout_8">
           <item alignment="Qt::AlignHCenter">
            <widget class="QLabel" name="temperatura_prognoza_4">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>-°C</string>
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="kierunek_wiatru_prognoza_4">
             <property name="text">
              <string>&lt;-</string>
@@ -831,6 +1048,11 @@
           </item>
           <item alignment="Qt::AlignHCenter">
            <widget class="QLabel" name="predkosc_wiatru_prognoza_4">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>- km/h</string>
             </property>
@@ -840,17 +1062,29 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_18">
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="dzien_prognoza_4">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
-             <string>TextLabel</string>
+             <string>śr.</string>
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="cisnienie_prognoza_4">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
-             <string>- hPa</string>
+             <string>1000 hPa</string>
             </property>
            </widget>
           </item>
@@ -858,13 +1092,18 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_13" stretch="0,1">
-          <item alignment="Qt::AlignLeft|Qt::AlignTop">
+          <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
            <widget class="QLabel" name="warunki_do_polowu_ryb_prognoza_4">
             <property name="maximumSize">
              <size>
               <width>16777215</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>Warunki do połowu ryb:</string>
@@ -873,35 +1112,35 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="rybki_prognoza_4">
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_4_1">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_4_2">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_4_3">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_4_4">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_4_5">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -923,7 +1162,7 @@
       </item>
       <item>
        <layout class="QHBoxLayout" name="prognoza_5">
-        <item>
+        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
          <widget class="QLabel" name="ikona_prognoza_5">
           <property name="autoFillBackground">
            <bool>true</bool>
@@ -941,14 +1180,21 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="dane_prognoza_5_1">
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="temperatura_prognoza_5">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>-°C</string>
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="kierunek_wiatru_prognoza_5">
             <property name="text">
              <string>&lt;-</string>
@@ -958,8 +1204,13 @@
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="predkosc_wiatru_prognoza_5">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
              <string>- km/h</string>
             </property>
@@ -969,17 +1220,29 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="dane_prognoza_5_2">
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="dzien_prognoza_5">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
-             <string>TextLabel</string>
+             <string>czw.</string>
             </property>
            </widget>
           </item>
-          <item alignment="Qt::AlignHCenter">
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
            <widget class="QLabel" name="cisnienie_prognoza_5">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="text">
-             <string>- hPa</string>
+             <string>1000 hPa</string>
             </property>
            </widget>
           </item>
@@ -987,13 +1250,18 @@
         </item>
         <item>
          <layout class="QVBoxLayout" name="warunki_prognoza_5" stretch="0,1">
-          <item alignment="Qt::AlignLeft|Qt::AlignTop">
+          <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
            <widget class="QLabel" name="warunki_do_polowu_ryb_prognoza_5">
             <property name="maximumSize">
              <size>
               <width>16777215</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="text">
              <string>Warunki do połowu ryb:</string>
@@ -1002,7 +1270,7 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="rybki_prognoza_5">
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_5_1">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -1010,28 +1278,28 @@
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_5_2">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_5_3">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_5_4">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="rybka_prognoza_5_5">
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ikony_openweather/ikony/ryba_pusta.png&quot;;  height=&quot;25&quot;  width=&quot;43&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1068,6 +1336,7 @@
      <string>Pomoc</string>
     </property>
     <addaction name="actionWy_wietl_pomoc"/>
+    <addaction name="actionWy_wietl_wykresy"/>
    </widget>
    <widget class="QMenu" name="menuWybierz_lokalizacj">
     <property name="title">
@@ -1075,6 +1344,7 @@
     </property>
     <addaction name="actionNysa_K_odzka_w_Bardzie"/>
     <addaction name="actionDunajec_Czch_w"/>
+    <addaction name="actionOdra_Wroc_aw"/>
    </widget>
    <addaction name="menuWybierz_lokalizacj"/>
    <addaction name="menuOkresy_Ochronne"/>
@@ -1096,6 +1366,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="action_odswiez"/>
+   <addaction name="actionWy_wietl_wykresy"/>
    <addaction name="actionWy_wietl_pomoc"/>
   </widget>
   <action name="actionWy_wietl_pomoc">
@@ -1131,10 +1402,24 @@
     <string>Wyświetl</string>
    </property>
   </action>
+  <action name="actionOdra_Wroc_aw">
+   <property name="text">
+    <string>Odra - Wrocław</string>
+   </property>
+  </action>
+  <action name="actionWy_wietl_wykresy">
+   <property name="icon">
+    <iconset resource="ikony_openweather.qrc">
+     <normaloff>:/ikony_openweather/ikony/statistics.png</normaloff>:/ikony_openweather/ikony/statistics.png</iconset>
+   </property>
+   <property name="text">
+    <string>Wyświetl wykresy</string>
+   </property>
+  </action>
  </widget>
  <resources>
-  <include location="ikony_openweather.qrc"/>
   <include location="ikony.qrc"/>
+  <include location="ikony_openweather.qrc"/>
  </resources>
  <connections/>
 </ui>
